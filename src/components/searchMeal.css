@@ -1,0 +1,32 @@
+
+.searchForm{
+    width: 50%;
+    margin: 2% auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchInput{
+    width: 80%;
+    height: 30px;
+    font-size: 17px;
+    margin: 2%;
+    padding: 0.5% 2%;
+    outline: none;
+    border: 1px solid #a1a1a1;
+    color: rgb(73, 73, 73);
+}
+
+.searchBtn{
+    font-family: 'Poppins', sans-serif;
+    width: 15%;
+    height: 37px;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 2%;
+    border: 1px solid #bdbdbd;
+    background-color: #00bd58;
+    color: #fff;
+    cursor: pointer;;
+
+}
