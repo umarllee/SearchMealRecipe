@@ -1,0 +1,130 @@
+.formCon{
+    width: 45%;
+    background-color:  #e7e7e7;
+    margin: 3% auto 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 3% 0;
+
+}
+
+.registerTitle{
+    padding-left: 4%;
+    color: #303030;
+}
+
+.inputsCon{
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+}
+
+.inputs{
+    width: 80%;
+    height: 25px;
+    margin-top: 1%;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-label{
+    font-size: 18px;
+    color: #4b4b4b;
+    
+}
+
+.registerSubmit{
+    background-color: rgb(177, 7, 7);
+    padding: 1.5% 3.5%;
+    border: none;
+    color: rgb(235, 235, 235);
+    font-size: 17px;
+    margin: 4%;
+    cursor: pointer;
+}
+
+.formInputsCon{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.alreadyRegContainer{
+    color: #303030;
+    display: flex;
+}
+
+.alreadyRegContainerLink{
+    color: red;
+    margin-left: 2%;
+}
+
+textarea{
+    resize: none;
+    height: 150px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+} 
+
+@media (max-width: 899px) and (min-width: 680px) {
+    .formCon{
+        width: 55%;
+    
+    }
+    .registerTitle{
+        font-size: 20px;
+    }
+    .inputs{
+        width: 85%;
+        height: 20px;
+    }
+
+    .input-label{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 679px) and (min-width: 400px) {
+    .formCon{
+        width: 70%;
+    
+    }
+    .registerTitle{
+        font-size: 18px;
+    }
+    .inputs{
+        width: 95%;
+        height: 20px;
+    }
+    .input-label{
+        font-size: 16px;
+    }
+    .registerSubmit{
+        font-size: 16px;
+    }
+    .alreadyRegContainerLink, .alreadyRegContainer{
+       font-size: 14px;
+    }
+}
+
+
+@media (max-width: 399px)  {
+    .formCon{
+        width: 80%;
+    
+    }
+    .registerTitle{
+        font-size: 17px;
+    }
+    .inputs{
+        width: 100%;
+        height: 20px;
+    }
+    .input-label{
+        font-size: 15px;
+    }
+    .registerSubmit{
+        font-size: 14px;
+    }
+    .alreadyRegContainerLink, .alreadyRegContainer{
+       font-size: 13px;
+    }
+}

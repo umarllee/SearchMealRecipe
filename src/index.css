@@ -4,10 +4,50 @@ body{
 }
 
 .noContent{
+    transition: all 0.2s linear;
     text-align: center;
     padding: 0.5% 0 3%;
     color: rgb(73, 73, 73);
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
+}
+
+.selectDishContainer{
+    padding: 2%;
+    text-align: center;
+}
+
+.selectDishItem{
+    background-color: #027538;
+    color: #fff;
+    padding: 0.5% 1.5%;
+    margin: 1%;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 899px) and (min-width: 680px) {
+    .noContent{
+        font-size: 20px;
+
+    }
+}
+
+@media (max-width: 679px) and (min-width: 400px) {
+    .noContent{
+        font-size: 18px;
+        margin: 5% auto;
+    }
+}
+
+
+@media (max-width: 399px)  {
+    .noContent{
+        font-size: 16px;
+        margin: 5% auto;
+    }
 }

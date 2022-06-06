@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/css';
 import './contentPage.css'
+import api from '../api'
 import p1 from './meal1.jpg'
 import p2 from './meal2.jpg'
 import p3 from './meal3.jpg'
@@ -21,10 +22,23 @@ export default function Content() {
             drag: 'free',
             focus: 'center',
             perPage: 1,
-           
+
         }).mount();
 
     }, []);
+
+    const [receipts, setReceipts] = useState([]);
+
+    const onSelectAmerican = async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target)
+        const str = formData.get("search");
+        console.log(str);
+
+        const res = await api.getReceipt(str);
+
+        console.log(res)
+    }
 
     return (
         <div className="con">
@@ -36,9 +50,9 @@ export default function Content() {
                 <div className="splide__track">
                     <ul className="splide__list">
                         <li className="splide__slide" data-splide-interval="3000"> <img src={p1} alt="meal" /> </li>
-                        <li className="splide__slide" data-splide-interval="3000"> <img src={p4} alt="meal" /> </li>
-                        <li className="splide__slide" data-splide-interval="3000"> <img src={p3} alt="meal" /> </li>
-                        <li className="splide__slide" data-splide-interval="3000"> <img src={p2} alt="meal" /> </li>
+                        <li className="splide__slide" data-splide-interval="3000"> <img src={p4} alt="meal" /></li>
+                        <li className="splide__slide" data-splide-interval="3000"> <img src={p3} alt="meal" /></li>
+                        <li className="splide__slide" data-splide-interval="3000"> <img src={p2} alt="meal" /></li>
                     </ul>
                 </div>
             </section>

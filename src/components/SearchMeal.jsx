@@ -1,10 +1,10 @@
 import React from 'react';
 import './searchMeal.css'
 
-export default function SearchMeal({onSearch}) {
+export default function SearchMeal({ onSearch }) {
     return (
         <div className="searchCon">
-            <form  onSubmit= {onSearch}  className="searchForm" >
+            <form onSubmit={onSearch} className="searchForm" >
                 <input
                     name="search"
                     type="text"
@@ -14,7 +14,7 @@ export default function SearchMeal({onSearch}) {
 
                 <button type="submit" className="searchBtn"> Search </button>
 
-                
+
             </form>
         </div>
     )

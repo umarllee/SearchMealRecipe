@@ -7,9 +7,31 @@ const getReceipt = async (searchString) => {
     throw new Error(response.Error);
   }
 
-  console.log(response.hits);
   return response.hits;
 };
 
-const api = { getReceipt };
+
+const save = async (request) => {
+  const response = await fetch('http://localhost:3200/users', {
+      method: 'POST',
+      body: JSON.stringify(request),
+      headers: {
+          'Content-Type': 'application/json'
+      }
+  });
+
+  if (response.ok) { 
+      return await response.json();
+  } 
+  throw new Error(await "EYNI EMAIL DAXIL edilib");
+}
+
+
+const getInfo = async (request) => {
+    
+  return await fetch('http://localhost:3200/users').then(res => res.json());
+}
+
+
+const api = { save, getReceipt, getInfo };
 export default api;

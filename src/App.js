@@ -1,44 +1,43 @@
-import React, {
-  Component
-} from 'react'
+import React, {useEffect, useState} from 'react'
+import { useSelector } from 'react-redux'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Navbar from './layouts/Navbar'
 import MainPage from './pages/MainPage'
-
+import Contact from './pages/Contact'
+import RegisterPage from './pages/Register'
+import Login from './pages/Login'
 import LoaderPage from './components/searchLoader'
+import {selectUser} from './features/userSlice'
+import api from './api'
 
 
-export default class App extends Component {
-  state = {
-    isLoading: false
-  }
+export default function App () {
+ 
+  const [isLoading, setIsLoading] = useState(false);
 
-  componentDidMount() {
+  useEffect(() => {
     setTimeout(() => {
-      this.setState({
-        isLoading: true
-      })
+      setIsLoading(true);
     }, 2000);
-  }
+  }, []);
 
-  render() {
+   let user = useSelector(selectUser);
+
     return ( 
     <div>
-      
-     
 
-      {!this.state.isLoading ? <LoaderPage/> : 
+      {!isLoading ? <LoaderPage/> : 
            (
            <BrowserRouter>
              <Navbar/>
-             
              <Routes>
-               <Route path='/' element={<MainPage/> }/>
+               <Route path='/' element={user.loggedIn ? <MainPage/> : <RegisterPage/> }/>
+               <Route path='/contact' element={<Contact/> }/>
+               <Route path='/signIn' element={user.loggedIn ? <MainPage/> : <Login/> }/>
              </Routes>
            </BrowserRouter>
            )
         }
       </div>
     );
-  }
 }

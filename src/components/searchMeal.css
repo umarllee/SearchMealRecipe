@@ -27,6 +27,73 @@
     border: 1px solid #bdbdbd;
     background-color: #00bd58;
     color: #fff;
-    cursor: pointer;;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+@media (max-width: 1200px) and (min-width: 900px) {
+    
+    .searchBtn{
+        font-size: 16px;
+    }
+
+    .searchInput{
+        font-size: 16px;
+        
+    }
+}
+
+@media (max-width: 899px) and (min-width: 680px) {
+    .searchForm{
+        width: 60%;
+    }
+    .searchBtn{
+        font-size: 14.5px;
+    }
+
+    .searchInput{
+        font-size: 15px;
+        
+    }
+}
+
+@media (max-width: 679px) and (min-width: 400px) {
+
+    .searchForm{
+        width: 90%;
+    }
+    .searchBtn{
+        font-size: 14px;
+        width: 17%;
+    }
+
+    .searchInput{
+        font-size: 15px;
+        width: 70%
+    }
+}
+
+
+@media (max-width: 399px)  {
+    .searchForm{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: 3% auto;
+    }
+    .searchBtn{
+        font-size: 14px;
+        width: 80%;
+        height: 30px;
+        margin: 0 auto;
+    }
+
+    .searchInput{
+        font-size: 15px;
+        width: 90%;
+        margin: 3% auto;
+    }
 
 }
